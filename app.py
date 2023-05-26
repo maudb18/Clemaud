@@ -10,6 +10,10 @@ db_name = 'wtf'
 db_user = 'clemaud'
 db_password = 'greta@2023'
 
+
+import glob
+print(glob.glob("/data/*"))
+
 # Route de l'API
 @app.route('/test')
 def get_insee_dept():
@@ -42,3 +46,5 @@ def get_insee_dept():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
+
+
