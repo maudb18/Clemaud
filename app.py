@@ -24,7 +24,7 @@ def get_insee_dept():
     cursor = conn.cursor()
 
     # Exécution de la requête SQL
-    query = "SELECT * FROM insee_dept"
+    query = "SELECT * FROM departements"
     cursor.execute(query)
     results = cursor.fetchall()
 
@@ -35,12 +35,12 @@ def get_insee_dept():
     # Conversion des résultats en format JSON
     data = []
     for result in results:
-        dept, insee, cheflieu = result
-        data.append({'DEPT': dept, 'INSEE': insee, 'CHEFLIEU': cheflieu})
+        dep, cheflieu, Cheflieu, ncc, nccenr = result
+        data.append({'dep': dep, 'cheflieu': cheflieu, 'Cheflieu': Cheflieu, 'ncc': ncc, 'nccenr': nccenr})
 
     return jsonify(data)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
 
 #test
