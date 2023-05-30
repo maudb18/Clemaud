@@ -8,7 +8,7 @@ db_host = 'clem-maud.postgres.database.azure.com'
 db_port = '5432'
 db_name = 'wtf'
 db_user = 'clemaud'
-db_password = 'greta@2023'
+db_password = '***'
 
 
 import glob
